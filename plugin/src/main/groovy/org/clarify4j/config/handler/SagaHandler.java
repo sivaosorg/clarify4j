@@ -14,7 +14,6 @@ import org.springframework.expression.common.TemplateParserContext;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
-import org.unify4j.common.Object4j;
 
 import java.lang.reflect.Method;
 
@@ -45,9 +44,6 @@ public class SagaHandler {
             context.setVariable(parameters[i], args[i]);
         }
         String value = EXPRESSION_PARSER.parseExpression(saga.expression(), TEMPLATE_PARSER_CONTEXT).getValue(context, String.class);
-        if (Object4j.allNotNull(saga.clazz())) {
-            logger = LoggerFactory.getLogger(saga.clazz());
-        }
         logger.info(value);
     }
 }
