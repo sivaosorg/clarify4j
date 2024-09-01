@@ -20,7 +20,7 @@ public class ExecutorSinceHandler {
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         Date start = new Date();
         Object proceed = joinPoint.proceed();
-        String since = Time4j.sinceSmallRecently(start, new Date());
+        String since = Time4j.sinceSmallRecently(new Date(), start);
         Signature signature = joinPoint.getSignature();
         String clazz = joinPoint.getTarget().getClass().getSimpleName();
         String method = signature.getName();
