@@ -1,4 +1,4 @@
-package org.clarify4j.config.annotation;
+package org.clarify4j.common.annotation;
 
 import java.lang.annotation.*;
 

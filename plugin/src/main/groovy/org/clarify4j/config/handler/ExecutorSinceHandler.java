@@ -16,7 +16,7 @@ import java.util.Date;
 public class ExecutorSinceHandler {
     protected static final Logger logger = LoggerFactory.getLogger(ExecutorSinceHandler.class);
 
-    @Around(value = "@annotation(org.clarify4j.config.annotation.ExecutorSince)")
+    @Around(value = "@annotation(org.clarify4j.common.annotation.ExecutorSince)")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         Date start = new Date();
         Object proceed = joinPoint.proceed();

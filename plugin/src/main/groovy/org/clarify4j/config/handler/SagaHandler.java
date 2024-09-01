@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.clarify4j.config.annotation.Saga;
+import org.clarify4j.common.annotation.Saga;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.expression.EvaluationContext;
@@ -24,7 +24,7 @@ public class SagaHandler {
     protected static final TemplateParserContext TEMPLATE_PARSER_CONTEXT = new TemplateParserContext("{{", "}}");
     protected static final ExpressionParser EXPRESSION_PARSER = new SpelExpressionParser();
 
-    @Pointcut(value = "@annotation(org.clarify4j.config.annotation.Saga)")
+    @Pointcut(value = "@annotation(org.clarify4j.common.annotation.Saga)")
     public void controller() {
     }
 

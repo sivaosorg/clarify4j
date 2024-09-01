@@ -2,7 +2,7 @@ package org.clarify4j;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.clarify4j.config.annotation.Saga;
+import org.clarify4j.common.annotation.Saga;
 import org.clarify4j.config.handler.SagaHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

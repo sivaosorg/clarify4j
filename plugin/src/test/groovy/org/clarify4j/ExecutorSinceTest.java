@@ -1,6 +1,6 @@
 package org.clarify4j;
 
-import org.clarify4j.config.annotation.ExecutorSince;
+import org.clarify4j.common.annotation.ExecutorSince;
 import org.junit.jupiter.api.Test;
 
 import java.lang.annotation.Annotation;
