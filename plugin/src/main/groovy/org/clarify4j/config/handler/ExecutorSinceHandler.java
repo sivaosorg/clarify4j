@@ -24,7 +24,7 @@ public class ExecutorSinceHandler {
         Signature signature = joinPoint.getSignature();
         String clazz = joinPoint.getTarget().getClass().getSimpleName();
         String method = signature.getName();
-        logger.info("Execution of method '{}' in class '{}' completed in {}", method, clazz, since);
+        logger.info("Clarify4j, execution of method '{}' in class '{}' completed in {}", method, clazz, since);
         return proceed;
     }
 }

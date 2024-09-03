@@ -43,7 +43,7 @@ public class SagaAspectTest {
         when(methodSignature.getParameterNames()).thenReturn(new String[]{"userId", "newName"});
 
         // Call the aspect method
-        sagaHandler.handle(joinPoint);
+        sagaHandler.execute(joinPoint);
 
         // Verify that the logging occurred (you might mock the logging framework to assert this)
         // Here, we are just verifying that the method ran without exceptions

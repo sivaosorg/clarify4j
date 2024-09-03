@@ -29,7 +29,7 @@ public class SagaHandler {
     }
 
     @Before(value = "controller()")
-    public void handle(JoinPoint joinPoint) throws Throwable {
+    public void execute(JoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Saga saga = method.getAnnotation(Saga.class);
@@ -44,6 +44,6 @@ public class SagaHandler {
             context.setVariable(parameters[i], args[i]);
         }
         String value = EXPRESSION_PARSER.parseExpression(saga.expression(), TEMPLATE_PARSER_CONTEXT).getValue(context, String.class);
-        logger.info(value);
+        logger.info(String.format("Clarify4j, %s", value));
     }
 }
