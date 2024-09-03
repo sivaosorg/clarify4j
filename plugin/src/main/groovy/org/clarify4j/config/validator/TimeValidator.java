@@ -23,7 +23,7 @@ public class TimeValidator implements ConstraintValidator<IsTime, String> {
         if (String4j.isEmpty(value)) {
             return false;
         }
-        return Regex4j.isTime24HFully(value) && Regex4j.isTime12HFully(value);
+        return Regex4j.isTime24HFully(value) || Regex4j.isTime12HFully(value);
     }
 }
 
