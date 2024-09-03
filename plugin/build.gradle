@@ -191,6 +191,9 @@ dependencies {
     // AOP enables modularization of cross-cutting concerns such as logging, security, and transactions by allowing aspects to be applied to various parts of the application.
     // This starter simplifies the setup and configuration of AOP-related functionality, promoting cleaner and more maintainable code by separating concerns effectively.
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.7.18'
+    // The "spring-boot-starter-security" library, version 2.7.18, is an essential component of Spring Boot applications,
+    // offering robust security features to safeguard your application's endpoints, authenticate users, and manage access control effectively.
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.7.18'
 }
 
 test {
