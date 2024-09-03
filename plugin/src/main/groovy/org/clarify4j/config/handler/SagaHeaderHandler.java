@@ -30,7 +30,7 @@ public class SagaHeaderHandler {
             return proceed;
         }
         Map<String, Object> headers = Request4j.getHeaders(Clarify4j.getRequest());
-        logger.info("Clarify4j, HTTP requesting: [JSESSIONID.REQ.ID]: {}, URL: {}, header(s): {}",
+        logger.info("Clarify4j, HTTP requesting [JSESSIONID.REQ.ID]: {}, [URL]: {}, [Header(s)]: {}",
                 Clarify4j.getCurrentSessionId(),
                 Request4j.getFullUrl(Clarify4j.getRequest()),
                 Json4j.toJson(headers));

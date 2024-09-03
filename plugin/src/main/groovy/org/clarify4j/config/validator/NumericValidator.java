@@ -23,6 +23,6 @@ public class NumericValidator implements ConstraintValidator<IsNumeric, String> 
         if (String4j.isEmpty(value)) {
             return false;
         }
-        return String4j.isNumeric(value) && Regex4j.isNumeric(value);
+        return Regex4j.isNumeric(value);
     }
 }
