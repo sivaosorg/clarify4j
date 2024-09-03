@@ -5,8 +5,6 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
-public @interface Saga {
-    String expression();
-
+public @interface SagaHeader {
     boolean disabled() default false;
 }

@@ -33,7 +33,7 @@ public class SagaHandler {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Saga saga = method.getAnnotation(Saga.class);
-        if (saga.disable()) {
+        if (saga.disabled()) {
             return;
         }
         EvaluationContext context = new StandardEvaluationContext();
