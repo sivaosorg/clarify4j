@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
-public @interface WithAuthHeader {
+public @interface SagaAuthHeader {
     boolean disabled() default false;
 
     String message() default "Access denied";

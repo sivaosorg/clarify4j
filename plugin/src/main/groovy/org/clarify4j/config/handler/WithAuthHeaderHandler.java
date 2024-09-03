@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.clarify4j.common.Clarify4j;
-import org.clarify4j.common.annotation.WithAuthHeader;
+import org.clarify4j.common.annotation.SagaAuthHeader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.AccessDeniedException;
@@ -20,12 +20,12 @@ import java.util.Map;
 public class WithAuthHeaderHandler {
     protected static final Logger logger = LoggerFactory.getLogger(WithAuthHeaderHandler.class);
 
-    @Around(value = "@annotation(org.clarify4j.common.annotation.WithAuthHeader)")
+    @Around(value = "@annotation(org.clarify4j.common.annotation.SagaAuthHeader)")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         Object proceed = joinPoint.proceed();
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        WithAuthHeader auth = method.getAnnotation(WithAuthHeader.class);
+        SagaAuthHeader auth = method.getAnnotation(SagaAuthHeader.class);
         if (auth.disabled()) {
             return proceed;
         }
