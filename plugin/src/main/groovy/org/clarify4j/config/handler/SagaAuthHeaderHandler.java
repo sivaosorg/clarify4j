@@ -17,8 +17,8 @@ import java.util.Map;
 
 @Aspect
 @Component
-public class WithAuthHeaderHandler {
-    protected static final Logger logger = LoggerFactory.getLogger(WithAuthHeaderHandler.class);
+public class SagaAuthHeaderHandler {
+    protected static final Logger logger = LoggerFactory.getLogger(SagaAuthHeaderHandler.class);
 
     @Around(value = "@annotation(org.clarify4j.common.annotation.SagaAuthHeader)")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
